@@ -1,0 +1,19 @@
+.root {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background-color: white;
+  border-radius: var(--def-br);
+  padding: var(--indent-lg);
+  max-width: 35rem;
+  width: 100%;
+  box-shadow: var(--box-shadow-default);
+}
+
+.form {
+  margin-top: var(--indent-lg);
+}

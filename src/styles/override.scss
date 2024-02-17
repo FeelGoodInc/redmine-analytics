@@ -1,0 +1,14 @@
+form {
+  label {
+    font-weight: 500;
+  }
+
+  .ant-form-item-label > label,
+  .ant-form-item-explain-error {
+    font-size: var(--font-sm1) !important;
+  }
+}
+
+.ant-form-item-margin-offset {
+  margin-bottom: -0.9rem !important;
+}

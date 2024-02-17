@@ -1,0 +1,33 @@
+:root {
+  --font-xs: 0.9rem;
+  --font-xs1: 1rem;
+  --font-xs2: 1.1rem;
+  --font-sm: 1.2rem;
+  --font-sm1: 1.3rem;
+  --font-sm2: 1.4rem;
+  --font-md: 1.5rem;
+  --font-md1: 1.6rem;
+  --font-md2: 1.7rem;
+  --font-lg: 1.9rem;
+  --font-lg1: 2rem;
+  --font-lg2: 2.1rem;
+  --font-xl: 2.3rem;
+  --font-xxl: 2.7rem;
+
+  --bg-default: #E4E7F0;
+  --bg-light: #F8F8FB;
+  --color-dark-grey: #5F6674;
+  --color-dark-grey-rgb: 95, 102, 116;
+
+  --def-br: 0.6rem;
+
+  --indent-xs: 0.5rem;
+  --indent-sm: 1rem;
+  --indent-md: 1.5rem;
+  --indent-lg: 2rem;
+  --indent-xl: 2.5rem;
+  --indent-xxl: 3rem;
+
+  --box-shadow-default-color: rgba(var(--color-dark-grey-rgb), 0.1);
+  --box-shadow-default: 0 0 1.5rem var(--box-shadow-default-color);
+}
