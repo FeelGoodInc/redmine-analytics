@@ -1,7 +1,16 @@
-import { SignInForm } from 'components/Forms/SignIn/Component';
-import styles         from './sign-in-page.module.scss';
+import { redirect }            from 'next/navigation';
+import { cookies }             from 'next/headers';
+import { SignInForm }          from 'components/Forms/SignIn/Component';
+import { API_KEY_COOKIE_NAME } from 'constants/global';
+import styles                  from './sign-in-page.module.scss';
 
 export default function SignInPage() {
+  const apiKey = cookies().get(API_KEY_COOKIE_NAME);
+  
+  if (apiKey) {
+    redirect('/');
+  }
+
   return (
     <div className={styles.root}>
       <div className={styles.content}>

@@ -1,14 +1,19 @@
 'use client';
 
+import { useRouter }           from 'next/navigation';
 import { Form, Input, Button } from 'antd';
 import { FormErrors }          from 'constants/form';
+import { API_KEY_COOKIE_NAME } from 'constants/global';
+import { setCookie }           from 'cookies-next';
 
 const SignInForm = (): JSX.Element => {
+  const { replace } = useRouter();
 
   // -----------------------------------------------------
 
   const submit = (formValue: any): void => {
-    console.log(formValue);
+    setCookie(API_KEY_COOKIE_NAME, formValue.key);
+    replace('/');
   };
 
   // -----------------------------------------------------

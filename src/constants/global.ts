@@ -1,0 +1,1 @@
+export const API_KEY_COOKIE_NAME = 'ra_api_key';

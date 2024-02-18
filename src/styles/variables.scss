@@ -20,6 +20,7 @@
   --color-dark-grey-rgb: 95, 102, 116;
 
   --def-br: 0.6rem;
+  --border-default-color: var(--bg-default);
 
   --indent-xs: 0.5rem;
   --indent-sm: 1rem;
@@ -30,4 +31,7 @@
 
   --box-shadow-default-color: rgba(var(--color-dark-grey-rgb), 0.1);
   --box-shadow-default: 0 0 1.5rem var(--box-shadow-default-color);
+
+  --side-menu-border-width: 0.4rem;
+  --side-menu-width: 25rem;
 }

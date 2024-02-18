@@ -11,13 +11,17 @@
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
     "antd": "^5.14.1",
+    "cookies-next": "^4.1.1",
+    "lodash": "^4.17.21",
     "next": "14.1.0",
     "react": "^18",
-    "react-cookie": "^7.0.2",
     "react-dom": "^18",
-    "sass": "^1.71.0"
+    "react-toastify": "^10.0.4",
+    "sass": "^1.71.0",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

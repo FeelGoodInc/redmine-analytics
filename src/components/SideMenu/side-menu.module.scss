@@ -1,0 +1,8 @@
+.root {
+  width: var(--side-menu-width);
+  border-right: var(--side-menu-border-width) solid var(--border-default-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
