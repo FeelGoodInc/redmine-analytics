@@ -1,16 +1,12 @@
-export type UserGroup = {
-  id: number;
-  name: string;
-};
+import type { TCustomField } from './customField';
 
-export type User = {
+export type TUser = {
   id: number;
   login: string;
   firstname: string;
   lastname: string;
   mail: string;
   created_on: string;
-  updated_on: string;
   last_login_on: string;
-  groups: UserGroup;
-};
+  custom_fields: TCustomField[];
+}

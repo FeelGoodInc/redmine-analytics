@@ -1,0 +1,149 @@
+@import "variables";
+
+$color-transition: color ease-in-out $transition-duration;
+$submenu-item-border-size: 0.5rem;
+
+.root {
+  width: $side-menu-width - $padding-sm;  
+
+  &:not(:last-child) {
+    border-bottom: $default-border;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  a {
+    color: $default-text-color;
+    text-decoration: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: calc(100vw - $padding-lg);
+  }
+}
+
+.tree_line {
+  display: none;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  font-size: $font-sm;
+  font-weight: 400;
+  border-radius: $def-br;
+  transition: background-color ease-in-out $transition-duration,
+              $color-transition,
+              border-left-color ease-in-out $transition-duration;
+
+  &:hover,
+  &.active {
+    background-color: $brand-primary-color;
+    color: $white;
+    cursor: pointer;
+
+    .icon,
+    .display_count,
+    .new_feature,
+    .arrow {
+      color: $white;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1.4rem;
+    color: $brand-dark-grey;
+    transition: $color-transition;
+  }
+
+  .text {
+    padding-left: $padding-sm;
+    flex-grow: 1;
+  }
+
+  .display_count {
+    font: {
+      size: $font-xs2;
+      weight: 600;
+    }
+    color: $brand-middle-grey;
+    transition: $color-transition;
+    padding-left: $padding-xs;
+  }
+
+  .arrow {
+    font-size: $font-md;
+    display: flex;
+    align-items: center;
+    color: $brand-middle-grey;
+    margin-right: -0.3rem;
+    transition: $color-transition;
+  }
+}
+
+$tree-line-border: 0.1rem dotted $brand-middle-grey;
+
+.submenu {
+  background-color: $white;
+
+  .root {
+    border-bottom: none;
+
+    &:last-child {
+      .tree_line_vertical {
+        bottom: 50%;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    padding-left: 1.3rem;
+    border-left: $submenu-item-border-size solid transparent;
+
+    &:hover,
+    &.active {
+      background-color: transparent;
+      border-left-color: $brand-primary-color;
+      color: $default-text-color;
+
+      .icon {
+        color: $brand-dark-grey;        
+      }
+      
+      .display_count {
+        color: $brand-middle-grey;
+      }
+    }
+
+    .icon {
+      margin-left: $margin-xs;
+    }
+  }
+
+  .tree_line {
+    display: block;
+  }
+
+  .tree_line_vertical {
+    border-right: $tree-line-border;
+    position: absolute;
+    top: 0.1rem;
+    bottom: 0;
+  }
+
+  .tree_line_horizontal {
+    border-bottom: $tree-line-border;
+    top: calc(50% - 0.1rem);
+    width: 1rem;
+  }
+}

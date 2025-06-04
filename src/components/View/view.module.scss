@@ -1,0 +1,34 @@
+@import "variables";
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: {
+    top: $view-content-padding;
+    left: $view-content-padding;
+    right: $view-content-padding;
+    bottom: $view-content-padding;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: {
+      top: $margin-sm;
+      left: $margin-sm;
+      right: $margin-sm;
+    }
+  }
+}
+
+.content {
+  flex-grow: 1;
+  position: relative;
+  background-color: $white;
+  border-radius: $def-br;
+  padding: $view-content-padding;
+
+  &.without_top_indent {
+    padding-top: 0;
+  }
+}

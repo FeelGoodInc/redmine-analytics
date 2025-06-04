@@ -1,0 +1,55 @@
+@import "variables";
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: width ease-in-out $transition-duration;
+  width: $side-menu-width;
+  overflow: hidden;
+  z-index: 2;
+  padding-left: $padding-sm;
+
+  @media (max-width: $tablet-width) {
+    width: calc(100vw - $padding-sm);
+    border-right: none;
+
+    .sections_wrapper,
+    .sections {
+      width: 100%;
+    }
+  }
+}
+
+.sections_wrapper {
+  flex-grow: 1;
+  width: $side-menu-width - $padding-sm;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.sections {
+  flex-grow: 1;
+  width: $side-menu-width - $padding-sm;
+  overflow: auto;
+  margin-right: -$margin-lg;
+}
+
+.more {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgb(66,139,202);
+  background: linear-gradient(0deg, $app-bg 0%, transparent 100%);
+
+  svg {
+    color: $brand-middle-grey;
+  }
+}
+
+.menu_hide {
+  display: none;
+}

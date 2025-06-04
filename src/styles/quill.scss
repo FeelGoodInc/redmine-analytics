@@ -1,0 +1,49 @@
+@import "variables";
+
+.ql-container {
+  color: $default-text-color !important;
+  font-size: $font-md !important;
+}
+
+.ql-container.ql-snow {  
+  border: 1px solid #e5e5ea !important;  
+  border-top: 0 !important;
+  min-height: 10rem;
+  border-radius: 0 0 $def-br $def-br;
+}
+
+.ql-editor {
+  min-height: 10rem;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #e5e5ea !important;
+  border-radius: $def-br $def-br 0 0;
+}
+
+.ql-snow .ql-tooltip[data-mode=link]::before {
+  content: 'Укажите ссылку:' !important;
+}
+
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  content: 'Сохранить' !important;
+}
+
+.ql-snow .ql-tooltip::before {
+  content: 'Перейти:' !important;
+}
+
+.ql-snow .ql-tooltip a.ql-action::after {
+  content: 'Изменить' !important;
+}
+
+.ql-snow .ql-tooltip a.ql-remove::before {
+  content: 'Удалить ссылку' !important;
+}
+
+.ql-snow .ql-tooltip,
+.ql-snow .ql-tooltip.ql-editing input[type=text] {
+  border: 1px solid #e5e5ea !important;
+  border-radius: 5px;
+}
+

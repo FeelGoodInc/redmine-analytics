@@ -1,0 +1,76 @@
+@import "variables";
+
+$height: 7.5rem;
+$avatar-size: 4rem;
+
+.root {
+  position: relative;
+}
+
+.top {
+  position: relative;
+  padding: $padding-sm 1.2rem $padding-sm $padding-sm;
+  transition: background-color ease-in-out $transition-duration;
+  border-radius: $def-br;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+
+  &:hover {
+    background-color: $app-light-bg;
+    cursor: pointer;
+  }  
+}
+
+.avatar {
+  height: $avatar-size;
+  width: $avatar-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $app-bg;
+  border-radius: $def-br;
+}
+
+.user {
+  flex-grow: 1;
+  margin: 0 $margin-sm 0 $margin-sm;
+  overflow: hidden;
+}
+
+.user_name,
+.user_email {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.user_name {
+  font: {
+    size: $font-sm;
+    weight: 500;
+  }
+}
+
+.user_email {
+  margin-top: 0.1rem;
+  font-size: $font-xs2;
+  color: $brand-middle-grey;
+}
+
+.arrow {
+  font-size: $font-md;
+  color: $brand-dark-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  background-color: $white;
+  z-index: 1;
+  border-bottom: $default-border;
+  border-radius: $def-br;
+  margin-top: 0.1rem;
+}

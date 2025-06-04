@@ -1,0 +1,14 @@
+{
+    "name": "MyObject",
+    "short_name": "MyObject",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#d9797a",
+    "background_color": "#d9797a",
+    "display": "standalone"
+}

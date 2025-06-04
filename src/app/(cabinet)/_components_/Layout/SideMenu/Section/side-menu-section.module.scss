@@ -1,0 +1,48 @@
+@import "variables";
+
+$border: 0.1rem solid $app-bg;
+
+.root {
+  position: relative;
+  width: $side-menu-width;
+
+  @media (max-width: $tablet-width) {
+    width: 100vw;
+  }
+}
+
+.title {
+  background-color: $white;  
+  padding: 0.8rem 1.2rem 0.7rem;
+  border-radius: $def-br;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color ease-in-out $transition-duration;
+  color: $brand-primary-color;
+  width: $side-menu-width - $padding-sm;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($app-light-bg, 1.5%);
+  }
+}
+
+.text {
+  text-transform: uppercase;
+  line-height: 1.4;
+  font: {
+    size: $font-xs;
+    weight: 700;
+  }
+}
+
+.arrow {
+  line-height: 1;
+  font-size: $font-md;
+  color: $brand-middle-grey;
+}
+
+.content {
+  padding: $padding-sm 0;
+}

@@ -1,0 +1,161 @@
+@import "variables";
+
+.rs-btn {
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+
+    svg {
+      font-size: 1.6rem;
+      margin-right: 0.6rem;
+    }
+  }
+}
+
+.rs-btn-default {
+  svg {
+    margin-top: -1px;
+  }
+}
+
+.rs-drawer {
+  .rs-drawer-header {
+    padding: $padding-lg 2.3rem $padding-lg $padding-lg * 3;
+  }
+  
+  .rs-drawer-body {
+    padding: 2.3rem;
+
+    &.inverted {
+      background-color: $app-light-bg;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100vw !important;
+
+    .rs-drawer-header {
+      padding: {
+        top: $padding-md;
+        right: $padding-md;
+        bottom: $padding-md;
+        left: $padding-md * 3;
+      }
+
+      .rs-drawer-header-close {
+        top: 1.8rem;
+        left: 0.8rem;
+      }
+    }
+
+    .rs-drawer-body {
+      padding: $padding-md;
+    }
+  }
+}
+
+.rs-modal {
+  margin: $margin-xxl auto;
+
+  .rs-modal-body {
+    overflow-x: hidden !important;
+  }
+
+  .rs-modal-header {
+    border-bottom: 0.1rem solid lighten($app-bg, 4%);
+    padding-bottom: $padding-lg;
+    position: relative;
+    font: {
+      size: $font-md1;
+      weight: 500;
+    }
+  
+    .rs-modal-header-close {
+      top: 0;
+      right: 0;
+      font-size: $font-lg1;
+      padding: 0;
+      line-height: 1;
+    }
+  }
+}
+
+.rs-form-error-message {
+  padding: 0.2rem 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  background-color: $brand-primary-color;
+  color: $white;
+}
+
+.rs-form:not(.rs-form-inline) .rs-form-group,
+.rs-form:not(.rs-form-inline) .rs-form-group:not(:last-child) {
+  margin-bottom: $padding-lg;
+}
+
+.rs-form-help-text {
+  padding-top: 0.8rem !important;
+  font-size: $font-sm;
+
+  &.no-padding-top {
+    padding-top: 0 !important;
+  }
+}
+
+.rs-form-control-label {
+  margin-bottom: $margin-sm;
+  font: {
+    size: $font-sm;
+    weight: 600;
+  }
+
+  &.with-note {
+    display: flex !important;
+    align-items: center;
+  }
+
+  > .rs-form-help-text {
+    height: 1.2rem;
+    padding-top: 0 !important;
+    margin-top: 0;
+    display: inline;
+    color: $brand-info-color;
+  }  
+}
+
+.rs-form-control-wrapper.column {
+  > .rs-form-error-message-wrapper {
+    left: $margin-sm;
+  }
+}
+
+.rs-tooltip {
+  text-align: left;
+}
+
+.rs-picker-select-menu-items {
+  border-top: $default-border;
+  
+  [role="option"] {
+    &:not(:last-child) {
+      border-bottom: $default-border;
+    }
+  }
+
+  .rs-picker-select-menu-item {
+    font-size: $font-sm1;
+    line-height: 1.6;
+  }
+}
+
+.rs-picker-menu-group-title {
+  &>span {
+    font-weight: 500;
+  }
+}

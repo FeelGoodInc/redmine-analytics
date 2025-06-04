@@ -1,0 +1,59 @@
+@import "variables";
+
+$icon-cnt-size: 6.4rem;
+
+:root {
+  --toastify-color-info: #{$brand-info-color};
+  --toastify-color-success: #{$brand-success-color};
+  --toastify-color-warning: #{$brand-warning-color};
+  --toastify-color-error: #{$brand-primary-color};
+}
+
+.Toastify__toast {
+  padding: 0;
+}
+
+.Toastify__toast-body {
+  padding: {
+    top: $padding-md;
+    right: $icon-cnt-size + $padding-md;
+    bottom: $padding-md;
+    left: $icon-cnt-size + $padding-md;
+  }
+  text-align: center;
+  margin: 0;
+}
+
+.Toastify__toast-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $icon-cnt-size;
+  margin-inline-end: 0;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 3rem;
+  }
+}
+
+.Toastify__toast--success {
+  .Toastify__toast-icon {
+    background-color: darken($brand-success-color, 3%);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .Toastify__toast-body {
+    padding-right: $padding-md;
+  }
+
+  .Toastify__toast-container--bottom-center {
+    left: $margin-sm;
+    right: $margin-sm;
+    bottom: $margin-sm;
+    width: auto !important;
+  }
+}

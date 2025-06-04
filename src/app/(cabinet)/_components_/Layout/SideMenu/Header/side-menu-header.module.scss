@@ -1,0 +1,48 @@
+@import "variables";
+
+$side-padding: 0.8rem;
+$vertical-padding: 0.8rem;
+
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem $side-padding 1.9rem;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: $padding-xs;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.logo_image {
+  height: 2.7rem;
+}
+
+.logo_text {
+  padding: 0 $padding-sm;
+  color: $brand-dark-grey;
+}
+
+.project_name {
+  font-weight: 700;
+}
+
+.project_version {
+  font-size: $font-xs2;
+  font-weight: 600;
+
+  &.not_equal_versions {
+    color: $brand-danger-color;
+  }
+}

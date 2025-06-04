@@ -1,0 +1,81 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  background-color: $app-light-bg !important;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+b {
+  font-weight: 600;
+}
+
+a {
+  font-weight: 500;
+}
+
+label.required {
+  color: $brand-primary-color;
+
+  &:after {
+    content: '*';
+    display: inline-block;
+    font-size: $font-md1;
+    line-height: 1;
+    margin-left: 0.3rem;
+    color: $brand-primary-color;
+  }
+}
+
+.text {
+  &.warning {
+    color: $brand-warning-color;
+  }
+
+  &.success {
+    color: $brand-success-color;
+  }
+
+  &.info {
+    color: $brand-info-color;
+  }
+
+  &.danger {
+    color: $brand-primary-color;
+  }
+
+  &.light {
+    color: $brand-middle-grey;
+  }
+
+  &.default {
+    color: $default-text-color;
+  }
+}
+
+pre {
+  font: {
+    family: 'Inter';
+    size: $font-sm;
+  }
+  margin: 0;
+}
+
+table {
+  width: 100%;
+
+  th {
+    text-align: left;
+  }
+}

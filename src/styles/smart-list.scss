@@ -1,0 +1,15 @@
+@import "variables";
+
+.smart-list-selected-item {
+  background-color: lighten($brand-info-color, 10%);
+  color: $white;
+
+  a, svg {
+    color: $white !important;
+  }
+
+  &:hover {
+    background-color: lighten($brand-info-color, 10%) !important;
+    color: $white;
+  }
+}

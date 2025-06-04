@@ -1,0 +1,1 @@
+import type { IResource, IResourceCRUD } from 'api';

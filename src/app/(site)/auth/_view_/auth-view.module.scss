@@ -1,0 +1,27 @@
+@import "variables";
+
+.root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $app-light-bg;
+}
+
+.content {
+  background-color: $white;
+  border-radius: $def-br;
+  min-width: 35rem;
+  overflow: hidden;
+}
+
+.header {
+  padding: $padding-lg;
+  text-align: center;
+}
+
+.form {
+  padding: $padding-lg;
+  border-top: 0.1rem solid $app-light-bg;
+}

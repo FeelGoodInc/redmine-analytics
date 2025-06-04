@@ -1,0 +1,190 @@
+@import "variables";
+
+$border: $default-border;
+
+form .root.expanded .header .title {
+  color: $default-text-color;
+}
+
+.root {
+  position: relative;
+
+  &:not(.expandable) {
+    margin-bottom: $margin-lg;
+  }
+
+  &.expandable {
+    > .header:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:not(:last-child) {
+    > .header {
+      border-bottom: $border;
+    }
+
+    &.expandable {
+      .content {
+        border-bottom: $border;
+      }
+    }
+  }
+
+  &.expanded {
+    > .header {
+      border-bottom: $border;
+    }
+  }
+
+  &.with_actions {
+    .header {
+      padding: 1.2rem 0;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($white, 0.75);
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-lg 0;
+}
+
+.icon {
+  line-height: 1;
+  font-size: $font-lg;
+  margin: {
+    top: -0.3rem;
+    right: $margin-sm;
+  }
+}
+
+.title {
+  position: relative;
+  flex-grow: 1;
+  transition: color ease-in-out $transition-duration;
+  line-height: 1.7;
+  font: {
+    size: $font-sm;
+    weight: 600;
+  }
+
+  :global(.rs-form-error-message-inner) {
+    text-transform: none;
+    font-weight: 400;
+  }
+}
+
+.titleUppercase {
+  text-transform: uppercase;
+}
+
+.arrow {
+  margin-left: -0.4rem;
+  padding-right: $padding-sm;
+  height: $font-lg1;
+
+  svg {
+    font-size: $font-lg1;
+  }
+}
+
+.actions {
+  padding-left: $padding-sm;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  min-height: 3.6rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &.action_with_text {
+    svg {
+      margin-right: $margin-sm;
+    }
+  }
+
+  .action_text {
+    font-size: $font-sm;
+  }
+}
+
+.count_badge {
+  color: $brand-middle-grey;
+  font-weight: 600;
+  padding-left: $padding-sm;
+}
+
+.content {
+  position: relative;
+  display: none;
+  padding: 0.1rem;
+
+  &.padding_left {
+    padding-left: $padding-lg - 0.1rem;
+
+    @media (max-width: $tablet-width) {
+      padding-left: $padding-sm - 0.1rem;
+    }
+  }
+  
+  &.padding_top {
+    padding-top: $padding-lg - 0.1rem;
+
+    @media (max-width: $tablet-width) {
+      padding-top: $padding-sm - 0.1rem;
+    }
+  }
+
+  &.padding_right {
+    padding-right: $padding-lg - 0.1rem;
+
+    @media (max-width: $tablet-width) {
+      padding-right: $padding-sm - 0.1rem;
+    }
+  }
+
+  &.padding_bottom {
+    padding-bottom: $padding-lg - 0.1rem;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: $padding-sm - 0.1rem;
+    }
+  }
+
+  &.grey_bg {
+    background-color: $app-light-bg;
+  }
+
+  &.white_bg {
+    background-color: $white;
+  }
+
+  &.transparent_bg {
+    background-color: transparent;
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  &:empty {
+    display: none;
+  }
+}

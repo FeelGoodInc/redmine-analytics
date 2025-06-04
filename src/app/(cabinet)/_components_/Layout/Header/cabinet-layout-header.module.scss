@@ -1,0 +1,56 @@
+@import "variables";
+
+.root {
+  position: relative;
+  background-color: $app-light-bg;
+  width: 100%;
+  display: flex;
+}
+
+.menu {
+  background-color: $brand-primary-color;  
+  color: $white;
+
+  svg {
+    font-size: $font-sm1 * 2;
+  }
+
+  &:hover {
+    background-color: darken($brand-primary-color, 5%);
+  }
+}
+
+.action {
+  width: $header-height;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color ease-in-out $transition-duration;
+
+  &:hover {
+    cursor: pointer;    
+  }
+}
+
+.project {
+  height: $header-height;
+  padding-left: $padding-md;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $brand-dark-grey;  
+}
+
+.project_name {
+  font-weight: 700;
+}
+
+.project_version {
+  font-size: $font-xs2;
+  font-weight: 600;
+}
+
+.delimeter {
+  flex-grow: 1;
+}

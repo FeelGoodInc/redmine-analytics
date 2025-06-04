@@ -1,0 +1,21 @@
+// MOVE CHANGES TO mo-ui-react after merge into develop
+[class^="ui-smart-list-search_root"] .rs-input-group .rs-input {
+  padding-left: 0 !important;
+}
+
+[class*="ui-smart-list-header-action_primary"] {
+  [class*="ui-smart-list-header-action_main_action"] {
+    > svg {
+      margin-top: 0 !important;
+    }
+
+    > [class^="ui-smart-list-header-action_text"] {
+      margin-left: 0.8rem;
+    }
+  }
+
+  a,
+  button {
+    min-height: 3.8rem !important;
+  }
+}

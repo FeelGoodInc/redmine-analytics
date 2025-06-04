@@ -1,0 +1,160 @@
+@import "variables";
+
+.root {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: $padding-sm;
+    margin-bottom: $margin-sm;
+  }
+}
+
+.breadcrumbs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font: {
+    weight: 500;
+    size: $font-sm;
+  }
+
+  &:not(:empty) {
+    margin-bottom: $margin-sm;
+  }
+
+  .breadcrumb_delimeter {
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-md;
+    color: $brand-middle-grey;
+    margin: 0 $margin-xs;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-bottom: $margin-lg;
+}
+
+.icon {
+  font-size: 3.6rem;
+  display: flex;
+  align-items: center;
+  color: $brand-middle-grey;
+}
+
+.titles {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
+
+  &.left_padding {
+    padding-left: $margin-md;
+  }
+}
+
+.title {  
+  min-width: 0;
+  width: 100%;
+  font: {
+    size: $font-xl;
+    weight: 400;
+  }
+}
+
+.subtitle {
+  color: $brand-middle-grey;
+  font-size: $font-sm;
+}
+
+.title,
+.subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  background-color: $white;
+  border-radius: $def-br;
+  padding: $margin-xs;
+  margin-bottom: $margin-sm;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  min-height: 3.6rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  svg {
+    margin: {
+      right: $margin-sm;
+    }
+  }
+
+  .action_text {
+    font-size: $font-sm;    
+  }
+
+  @media (max-width: $tablet-width) {
+    svg {
+      margin-right: 0;
+    }
+
+    .action_text {
+      display: none;
+    }
+  }
+}
+
+.action_menu {
+  margin: 0;
+  list-style: none;
+  font-size: $font-sm;
+  text-align: left;
+  border-radius: $def-br;
+  padding: 0;
+  outline: 0;
+
+  :global(.rs-dropdown-item) {
+    padding: $padding-md;
+
+    &:not(:last-child) {
+      border-bottom: $default-border;
+    }
+
+    svg {
+      width: auto;
+      font-size: $font-md2;
+      margin: {
+        top: -0.2rem;
+        right: $margin-sm;
+      }
+    }
+  }
+}
+
+.action_menu_btn {
+  opacity: 1;
+  border-left: 0.1rem solid $app-bg;
+}
+
+.primary_action {
+  button > svg {
+    font-size: $font-md2;
+  }
+
+  .action_menu_btn {
+    border-left: 0.1rem solid darken($brand-success-color, 3%);
+  }
+}
